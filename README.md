@@ -187,4 +187,4 @@ visible without querying the database directly.
 
 ---
 
-*Built with ❤️ using Python, HuggingFace Transformers, and Streamlit.*
+*Built using Python, HuggingFace Transformers, and Streamlit.*
