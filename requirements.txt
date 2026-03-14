@@ -1,0 +1,29 @@
+# Financial Sentiment Dashboard – Python Dependencies
+# Install: pip install -r requirements.txt
+# For GPU (CUDA 12): replace the torch line below with the CUDA wheel
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+# ── Data ─────────────────────────────────────────────────────────────────
+pandas>=2.0.0
+numpy>=1.26.0
+
+# ── Market data ──────────────────────────────────────────────────────────
+yfinance>=0.2.40
+
+# ── NLP / Sentiment ───────────────────────────────────────────────────────
+transformers>=4.40.0
+torch>=2.2.0              # CPU build; swap for CUDA build if GPU available
+
+# ── Statistics ───────────────────────────────────────────────────────────
+scipy>=1.13.0
+
+# ── Dashboard ────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+plotly>=5.21.0
+
+# ── Progress / UX ─────────────────────────────────────────────────────────
+tqdm>=4.66.0
+
+# ── Tokenizer extras (recommended by HuggingFace) ─────────────────────────
+sentencepiece>=0.2.0
+protobuf>=4.25.0

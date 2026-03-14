@@ -1,0 +1,288 @@
+2026-03-14 12:28:05 | INFO     | ============================================================
+2026-03-14 12:28:05 | INFO     | Financial News Ingestion Pipeline – START
+2026-03-14 12:28:05 | INFO     | ============================================================
+2026-03-14 12:28:05 | INFO     | Database initialized at: C:\Users\Pratyaksh\Desktop\finance project\financial-sentiment-dashboard\data\financial_news.db
+2026-03-14 12:28:07 | INFO     | Fetched 10 articles for ticker: RELIANCE.NS
+2026-03-14 12:28:07 | INFO     | Fetched 10 articles for ticker: INFY.NS
+2026-03-14 12:28:07 | INFO     | Fetched 0 articles for ticker: ICICIBC.NS
+2026-03-14 12:28:07 | INFO     | Total raw articles fetched: 20
+2026-03-14 12:28:07 | INFO     | Articles after cleaning: 20
+2026-03-14 12:28:07 | INFO     | Financial News Ingestion Pipeline – COMPLETE
+2026-03-14 12:28:07 | INFO     | ============================================================
+2026-03-14 12:31:45 | INFO     | ============================================================
+2026-03-14 12:31:45 | INFO     | Sentiment Analysis Pipeline – START
+2026-03-14 12:31:45 | INFO     | ============================================================
+2026-03-14 12:31:45 | INFO     | Found 20 unanalysed records.
+2026-03-14 12:31:45 | INFO     | Using device: cpu
+2026-03-14 12:31:45 | INFO     | Loading tokenizer from: ProsusAI/finbert
+2026-03-14 12:31:46 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-14 12:31:46 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json "HTTP/1.1 200 OK"
+2026-03-14 12:31:46 | INFO     | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json "HTTP/1.1 200 OK"
+2026-03-14 12:31:46 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-14 12:31:46 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-14 12:31:46 | INFO     | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-14 12:31:47 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-14 12:31:47 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-14 12:31:47 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/vocab.txt "HTTP/1.1 307 Temporary Redirect"
+2026-03-14 12:31:47 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/vocab.txt "HTTP/1.1 200 OK"
+2026-03-14 12:31:47 | INFO     | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/vocab.txt "HTTP/1.1 200 OK"
+2026-03-14 12:31:47 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/tokenizer.json "HTTP/1.1 404 Not Found"
+2026-03-14 12:31:48 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-03-14 12:31:48 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-14 12:31:48 | WARNING  | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-14 12:31:48 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-03-14 12:31:48 | INFO     | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-03-14 12:31:49 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-03-14 12:31:49 | INFO     | Loading model from: ProsusAI/finbert
+2026-03-14 12:31:49 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-14 12:31:49 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json "HTTP/1.1 200 OK"
+2026-03-14 12:31:50 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-03-14 12:31:50 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-03-14 12:31:50 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
+2026-03-14 12:31:51 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/xet-read-token/4556d13015211d73dccd3fdd39d39232506f3e43 "HTTP/1.1 200 OK"
+2026-03-14 12:32:56 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-03-14 12:32:56 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert "HTTP/1.1 200 OK"
+2026-03-14 12:32:57 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/commits/main "HTTP/1.1 200 OK"
+2026-03-14 12:32:57 | INFO     | Model loaded successfully and set to eval mode.
+2026-03-14 12:32:57 | INFO     | Starting inference on 20 headlines (batch_size=16).
+2026-03-14 12:32:57 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/discussions?p=0 "HTTP/1.1 200 OK"
+2026-03-14 12:32:57 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/commits/refs%2Fpr%2F29 "HTTP/1.1 200 OK"
+2026-03-14 12:32:58 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/refs%2Fpr%2F29/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-03-14 12:32:58 | INFO     | Writing sentiment results to database …
+2026-03-14 12:32:58 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/refs%2Fpr%2F29/model.safetensors "HTTP/1.1 302 Found"
+2026-03-14 12:32:58 | INFO     | Sentiment Analysis Pipeline – COMPLETE
+2026-03-14 12:32:58 | INFO     | ============================================================
+2026-03-14 12:32:58 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/xet-read-token/7db323f79b751944bcfa66298ec06977e4518306 "HTTP/1.1 200 OK"
+2026-03-14 12:48:49 | INFO     | ============================================================
+2026-03-14 12:48:49 | INFO     | Correlation Engine – START
+2026-03-14 12:48:49 | INFO     | ============================================================
+2026-03-14 12:48:49 | INFO     | Loaded 20 sentiment records from database.
+2026-03-14 12:48:52 | ERROR    | HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ICICIBC.NS"}}}
+2026-03-14 12:48:53 | ERROR    | $ICICIBC.NS: possibly delisted; no price data found  (period=30d) (Yahoo error = "No data found, symbol may be delisted")
+2026-03-14 12:48:55 | ERROR    | 
+1 Failed download:
+2026-03-14 12:48:55 | ERROR    | ['ICICIBC.NS']: possibly delisted; no price data found  (period=30d) (Yahoo error = "No data found, symbol may be delisted")
+2026-03-14 12:48:55 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 12:56:48 | INFO     | ============================================================
+2026-03-14 12:56:48 | INFO     | Correlation Engine – START
+2026-03-14 12:56:48 | INFO     | ============================================================
+2026-03-14 12:56:48 | INFO     | Loaded 20 sentiment records from database.
+2026-03-14 12:56:49 | ERROR    | HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: ICICIBC.NS"}}}
+2026-03-14 12:56:50 | ERROR    | $ICICIBC.NS: possibly delisted; no price data found  (period=30d) (Yahoo error = "No data found, symbol may be delisted")
+2026-03-14 12:56:50 | ERROR    | 
+1 Failed download:
+2026-03-14 12:56:50 | ERROR    | ['ICICIBC.NS']: possibly delisted; no price data found  (period=30d) (Yahoo error = "No data found, symbol may be delisted")
+2026-03-14 12:56:50 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 12:58:20 | INFO     | ============================================================
+2026-03-14 12:58:20 | INFO     | Correlation Engine – START
+2026-03-14 12:58:20 | INFO     | ============================================================
+2026-03-14 12:58:20 | INFO     | Loaded 20 sentiment records from database.
+2026-03-14 12:58:22 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 13:00:50 | INFO     | ============================================================
+2026-03-14 13:00:50 | INFO     | Correlation Engine – START
+2026-03-14 13:00:50 | INFO     | ============================================================
+2026-03-14 13:00:50 | INFO     | Loaded 20 sentiment records from database.
+2026-03-14 13:00:51 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 13:02:19 | INFO     | ============================================================
+2026-03-14 13:02:19 | INFO     | Correlation Engine – START
+2026-03-14 13:02:19 | INFO     | ============================================================
+2026-03-14 13:02:19 | INFO     | Loaded 20 sentiment records from database.
+2026-03-14 13:02:20 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 13:03:31 | INFO     | ============================================================
+2026-03-14 13:03:31 | INFO     | Correlation Engine – START
+2026-03-14 13:03:31 | INFO     | ============================================================
+2026-03-14 13:03:31 | INFO     | Loaded 20 sentiment records from database.
+2026-03-14 13:03:32 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 13:08:56 | INFO     | ============================================================
+2026-03-14 13:08:56 | INFO     | Correlation Engine – START
+2026-03-14 13:08:56 | INFO     | ============================================================
+2026-03-14 13:08:56 | INFO     | Loaded 20 sentiment records from database.
+2026-03-14 13:08:57 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 13:10:04 | INFO     | ============================================================
+2026-03-14 13:10:04 | INFO     | Correlation Engine – START
+2026-03-14 13:10:04 | INFO     | ============================================================
+2026-03-14 13:10:04 | INFO     | Loaded 20 sentiment records from database.
+2026-03-14 13:10:05 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 13:10:05 | WARNING  | No valid timestamps found after dropping NaT.
+2026-03-14 13:10:05 | WARNING  | Ticker RELIANCE.NS missing from one of the datasets; skipping.
+2026-03-14 13:10:05 | WARNING  | Ticker INFY.NS missing from one of the datasets; skipping.
+2026-03-14 13:10:05 | WARNING  | Ticker ICICIBANK.NS missing from one of the datasets; skipping.
+2026-03-14 13:10:05 | ERROR    | No overlapping data after merge. Check date ranges.
+2026-03-14 13:10:05 | ERROR    | Merged dataset is empty. Cannot compute correlations.
+2026-03-14 13:26:46 | INFO     | ============================================================
+2026-03-14 13:26:46 | INFO     | Financial News Ingestion Pipeline – START
+2026-03-14 13:26:46 | INFO     | ============================================================
+2026-03-14 13:26:46 | INFO     | Database initialized at: C:\Users\Pratyaksh\Desktop\finance project\financial-sentiment-dashboard\data\financial_news.db
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Robert Kiyosaki Says India's Reliance Could Be Key To Trump's Venezuela Oil Strategy: 'Not A Coincidence'
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Trump says the U.S. will open its first new oil refinery in nearly 50 years as the U.S. military avoids bombing Iran’s oil infrastructure
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Reliance Industries to Fund $300B US Refinery: India ETFs in Focus
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Trump announces new US refinery backed by India's Reliance
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Indian shares open flat amid choppy oil, mixed Mideast cues
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Indian refiners tumble as crude surges on widening Iran war
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Indian shares tumble at open as Mideast war drives oil spike
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Reliance Industries Pivots Back to Russian Oil with U.S. Waiver
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Fazer “explores” India tie-up with local FMCG major Reliance
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Ships loaded with Reliance diesel, jet fuel turn to Asia instead of Europe
+2026-03-14 13:26:47 | INFO     | Fetched 10 articles for ticker: RELIANCE.NS
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Bernstein: Human oversight remains critical despite rapid AI coding integration
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Asian Equities Traded in the US as American Depositary Receipts Rise in Friday Trading
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: How The Infosys (NSEI:INFY) Story Is Shifting As AI Risks Meet Cautious Optimism
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Intel Weighs New AI Edge Wins Against 18A And Security Risks
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Intel Gains on AI Partnership With Infosys
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Intel Corporation (INTC) and Infosys Expand Strategic AI Infrastructure Partnership
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Can Intel's AI Push With Infosys Deal Drive Long-Term Growth?
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Intel’s China Scrutiny Collides With New AI And 6G Alliances
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Intel’s AI Native 6G Alliances And New Chair Reshape Growth Story
+2026-03-14 13:26:47 | WARNING  | Missing publish time for article: Asian Equities Traded in the US as American Depositary Receipts Fall Sharply in Thursday Trading
+2026-03-14 13:26:47 | INFO     | Fetched 10 articles for ticker: INFY.NS
+2026-03-14 13:26:48 | INFO     | Fetched 0 articles for ticker: ICICIBC.NS
+2026-03-14 13:26:48 | INFO     | Total raw articles fetched: 20
+2026-03-14 13:26:48 | INFO     | Articles after cleaning: 20
+2026-03-14 13:26:48 | INFO     | Financial News Ingestion Pipeline – COMPLETE
+2026-03-14 13:26:48 | INFO     | ============================================================
+2026-03-14 13:28:57 | INFO     | ============================================================
+2026-03-14 13:28:57 | INFO     | Sentiment Analysis Pipeline – START
+2026-03-14 13:28:57 | INFO     | ============================================================
+2026-03-14 13:28:57 | INFO     | Found 20 unanalysed records.
+2026-03-14 13:28:57 | INFO     | Using device: cpu
+2026-03-14 13:28:57 | INFO     | Loading tokenizer from: ProsusAI/finbert
+2026-03-14 13:28:58 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-14 13:28:58 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json "HTTP/1.1 200 OK"
+2026-03-14 13:28:58 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-14 13:28:58 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-14 13:28:59 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-14 13:28:59 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-14 13:28:59 | INFO     | Loading model from: ProsusAI/finbert
+2026-03-14 13:28:59 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-14 13:28:59 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json "HTTP/1.1 200 OK"
+2026-03-14 13:29:00 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-03-14 13:29:00 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert "HTTP/1.1 200 OK"
+2026-03-14 13:29:01 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/commits/main "HTTP/1.1 200 OK"
+2026-03-14 13:29:01 | INFO     | Model loaded successfully and set to eval mode.
+2026-03-14 13:29:01 | INFO     | Starting inference on 20 headlines (batch_size=16).
+2026-03-14 13:29:01 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/discussions?p=0 "HTTP/1.1 200 OK"
+2026-03-14 13:29:01 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/commits/refs%2Fpr%2F29 "HTTP/1.1 200 OK"
+2026-03-14 13:29:02 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/refs%2Fpr%2F29/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-03-14 13:29:02 | INFO     | Writing sentiment results to database …
+2026-03-14 13:29:02 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/refs%2Fpr%2F29/model.safetensors "HTTP/1.1 302 Found"
+2026-03-14 13:29:02 | INFO     | Sentiment Analysis Pipeline – COMPLETE
+2026-03-14 13:29:02 | INFO     | ============================================================
+2026-03-14 13:30:21 | INFO     | ============================================================
+2026-03-14 13:30:21 | INFO     | Correlation Engine – START
+2026-03-14 13:30:21 | INFO     | ============================================================
+2026-03-14 13:30:21 | INFO     | Loaded 20 sentiment records from database.
+2026-03-14 13:30:23 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 13:30:23 | INFO     | Daily sentiment aggregated: 1 rows.
+2026-03-14 13:30:23 | WARNING  | Ticker ICICIBANK.NS missing from one of the datasets; skipping.
+2026-03-14 13:30:23 | INFO     | Merged dataset: 0 rows.
+2026-03-14 13:30:23 | ERROR    | Merged dataset is empty. Cannot compute correlations.
+2026-03-14 13:41:20 | INFO     | ============================================================
+2026-03-14 13:41:20 | INFO     | Sentiment Analysis Pipeline – START
+2026-03-14 13:41:20 | INFO     | ============================================================
+2026-03-14 13:41:20 | INFO     | Found 0 unanalysed records.
+2026-03-14 13:41:20 | INFO     | All records already have sentiment labels. Nothing to do.
+2026-03-14 13:41:37 | INFO     | ============================================================
+2026-03-14 13:41:37 | INFO     | Correlation Engine – START
+2026-03-14 13:41:37 | INFO     | ============================================================
+2026-03-14 13:41:37 | INFO     | Loaded 20 sentiment records from database.
+2026-03-14 13:41:38 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 13:41:38 | INFO     | Daily sentiment aggregated: 1 rows.
+2026-03-14 13:41:38 | WARNING  | Ticker ICICIBANK.NS missing from one of the datasets; skipping.
+2026-03-14 13:41:38 | INFO     | Merged dataset: 0 rows.
+2026-03-14 13:41:38 | ERROR    | Merged dataset is empty. Cannot compute correlations.
+2026-03-14 13:45:08 | INFO     | ============================================================
+2026-03-14 13:45:08 | INFO     | Financial News Ingestion Pipeline – START
+2026-03-14 13:45:08 | INFO     | ============================================================
+2026-03-14 13:45:08 | INFO     | Database initialized at: C:\Users\Pratyaksh\Desktop\finance project\financial-sentiment-dashboard\data\financial_news.db
+2026-03-14 13:45:09 | WARNING  | Missing publish time for article: Robert Kiyosaki Says India's Reliance Could Be Key To Trump's Venezuela Oil Strategy: 'Not A Coincidence'
+2026-03-14 13:45:09 | WARNING  | Missing publish time for article: Trump says the U.S. will open its first new oil refinery in nearly 50 years as the U.S. military avoids bombing Iran’s oil infrastructure
+2026-03-14 13:45:09 | WARNING  | Missing publish time for article: Reliance Industries to Fund $300B US Refinery: India ETFs in Focus
+2026-03-14 13:45:09 | WARNING  | Missing publish time for article: Trump announces new US refinery backed by India's Reliance
+2026-03-14 13:45:09 | WARNING  | Missing publish time for article: Indian shares open flat amid choppy oil, mixed Mideast cues
+2026-03-14 13:45:09 | WARNING  | Missing publish time for article: Indian refiners tumble as crude surges on widening Iran war
+2026-03-14 13:45:09 | WARNING  | Missing publish time for article: Indian shares tumble at open as Mideast war drives oil spike
+2026-03-14 13:45:09 | WARNING  | Missing publish time for article: Reliance Industries Pivots Back to Russian Oil with U.S. Waiver
+2026-03-14 13:45:09 | WARNING  | Missing publish time for article: Fazer “explores” India tie-up with local FMCG major Reliance
+2026-03-14 13:45:09 | WARNING  | Missing publish time for article: Ships loaded with Reliance diesel, jet fuel turn to Asia instead of Europe
+2026-03-14 13:45:09 | INFO     | [Yahoo Finance] Fetched 10 articles for ticker: RELIANCE.NS
+2026-03-14 13:45:10 | WARNING  | Missing publish time for article: Bernstein: Human oversight remains critical despite rapid AI coding integration
+2026-03-14 13:45:10 | WARNING  | Missing publish time for article: Asian Equities Traded in the US as American Depositary Receipts Rise in Friday Trading
+2026-03-14 13:45:10 | WARNING  | Missing publish time for article: How The Infosys (NSEI:INFY) Story Is Shifting As AI Risks Meet Cautious Optimism
+2026-03-14 13:45:10 | WARNING  | Missing publish time for article: Intel Weighs New AI Edge Wins Against 18A And Security Risks
+2026-03-14 13:45:10 | WARNING  | Missing publish time for article: Intel Gains on AI Partnership With Infosys
+2026-03-14 13:45:10 | WARNING  | Missing publish time for article: Intel Corporation (INTC) and Infosys Expand Strategic AI Infrastructure Partnership
+2026-03-14 13:45:10 | WARNING  | Missing publish time for article: Can Intel's AI Push With Infosys Deal Drive Long-Term Growth?
+2026-03-14 13:45:10 | WARNING  | Missing publish time for article: Intel’s China Scrutiny Collides With New AI And 6G Alliances
+2026-03-14 13:45:10 | WARNING  | Missing publish time for article: Intel’s AI Native 6G Alliances And New Chair Reshape Growth Story
+2026-03-14 13:45:10 | WARNING  | Missing publish time for article: Asian Equities Traded in the US as American Depositary Receipts Fall Sharply in Thursday Trading
+2026-03-14 13:45:10 | INFO     | [Yahoo Finance] Fetched 10 articles for ticker: INFY.NS
+2026-03-14 13:45:10 | INFO     | [Yahoo Finance] Fetched 0 articles for ticker: ICICIBC.NS
+2026-03-14 13:45:10 | INFO     | [Yahoo Finance] Total articles fetched across all tickers: 20
+2026-03-14 13:45:10 | INFO     | [Aggregator] Yahoo Finance contributed 20 records.
+2026-03-14 13:45:10 | WARNING  | [NewsAPI] NEWSAPI_KEY env var not set – skipping NewsAPI source.
+2026-03-14 13:45:10 | INFO     | [Aggregator] NewsAPI contributed 0 records for 'RELIANCE'.
+2026-03-14 13:45:11 | INFO     | [Google RSS] Fetched 100 articles for query 'RELIANCE'
+2026-03-14 13:45:11 | INFO     | [Aggregator] Google RSS contributed 100 records for 'RELIANCE'.
+2026-03-14 13:45:11 | WARNING  | [NewsAPI] NEWSAPI_KEY env var not set – skipping NewsAPI source.
+2026-03-14 13:45:11 | INFO     | [Aggregator] NewsAPI contributed 0 records for 'INFY'.
+2026-03-14 13:45:12 | INFO     | [Google RSS] Fetched 100 articles for query 'INFY'
+2026-03-14 13:45:12 | INFO     | [Aggregator] Google RSS contributed 100 records for 'INFY'.
+2026-03-14 13:45:12 | WARNING  | [NewsAPI] NEWSAPI_KEY env var not set – skipping NewsAPI source.
+2026-03-14 13:45:12 | INFO     | [Aggregator] NewsAPI contributed 0 records for 'ICICIBC'.
+2026-03-14 13:45:13 | INFO     | [Google RSS] Fetched 9 articles for query 'ICICIBC'
+2026-03-14 13:45:13 | INFO     | [Aggregator] Google RSS contributed 9 records for 'ICICIBC'.
+2026-03-14 13:45:13 | INFO     | [Aggregator] Final combined record count: 229
+2026-03-14 13:45:13 | INFO     | Total raw articles fetched (post-dedup): 229
+2026-03-14 13:45:13 | INFO     | Articles after cleaning: 229
+2026-03-14 13:45:13 | INFO     | [Summary] Final record count inserted into DB: 229
+2026-03-14 13:45:13 | INFO     | Financial News Ingestion Pipeline – COMPLETE
+2026-03-14 13:45:13 | INFO     | ============================================================
+2026-03-14 13:45:54 | INFO     | ============================================================
+2026-03-14 13:45:54 | INFO     | Sentiment Analysis Pipeline – START
+2026-03-14 13:45:54 | INFO     | ============================================================
+2026-03-14 13:45:54 | INFO     | Found 229 unanalysed records.
+2026-03-14 13:45:54 | INFO     | Using device: cpu
+2026-03-14 13:45:54 | INFO     | Loading tokenizer from: ProsusAI/finbert
+2026-03-14 13:45:55 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-14 13:45:55 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json "HTTP/1.1 200 OK"
+2026-03-14 13:45:55 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-14 13:45:55 | WARNING  | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-14 13:45:55 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-14 13:45:56 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-14 13:45:56 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-14 13:45:56 | INFO     | Loading model from: ProsusAI/finbert
+2026-03-14 13:45:57 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-14 13:45:57 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json "HTTP/1.1 200 OK"
+2026-03-14 13:45:57 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-03-14 13:45:58 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert "HTTP/1.1 200 OK"
+2026-03-14 13:45:58 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/commits/main "HTTP/1.1 200 OK"
+2026-03-14 13:45:58 | INFO     | Model loaded successfully and set to eval mode.
+2026-03-14 13:45:58 | INFO     | Starting inference on 229 headlines (batch_size=16).
+2026-03-14 13:45:59 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/discussions?p=0 "HTTP/1.1 200 OK"
+2026-03-14 13:45:59 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/commits/refs%2Fpr%2F29 "HTTP/1.1 200 OK"
+2026-03-14 13:45:59 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/refs%2Fpr%2F29/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-03-14 13:45:59 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/refs%2Fpr%2F29/model.safetensors "HTTP/1.1 302 Found"
+2026-03-14 13:46:08 | INFO     | Writing sentiment results to database …
+2026-03-14 13:46:10 | INFO     | Sentiment Analysis Pipeline – COMPLETE
+2026-03-14 13:46:10 | INFO     | ============================================================
+2026-03-14 13:46:23 | INFO     | ============================================================
+2026-03-14 13:46:23 | INFO     | Correlation Engine – START
+2026-03-14 13:46:23 | INFO     | ============================================================
+2026-03-14 13:46:23 | INFO     | Loaded 229 sentiment records from database.
+2026-03-14 13:46:24 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 13:46:24 | INFO     | Daily sentiment aggregated: 1 rows.
+2026-03-14 13:46:24 | WARNING  | Ticker ICICIBANK.NS missing from one of the datasets; skipping.
+2026-03-14 13:46:24 | INFO     | Merged dataset: 0 rows.
+2026-03-14 13:46:24 | ERROR    | Merged dataset is empty. Cannot compute correlations.
+2026-03-14 13:51:44 | INFO     | ============================================================
+2026-03-14 13:51:44 | INFO     | Correlation Engine – START
+2026-03-14 13:51:44 | INFO     | ============================================================
+2026-03-14 13:51:44 | INFO     | Loaded 229 sentiment records from database.
+2026-03-14 13:51:45 | INFO     | Fetched 30 days of price data for 3 tickers.
+2026-03-14 13:51:45 | INFO     | Daily sentiment aggregated: 1 rows.
+2026-03-14 13:51:45 | WARNING  | Ticker ICICIBANK.NS missing from one of the datasets; skipping.
+2026-03-14 13:51:45 | INFO     | Merged dataset: 58 rows.
+2026-03-14 13:51:45 | INFO     | RELIANCE.NS  | avg_sentiment=+nan | avg_price_change=-0.0258% | r=+nan | p=nan
+2026-03-14 13:51:45 | INFO     | INFY.NS      | avg_sentiment=+nan | avg_price_change=-0.9192% | r=+nan | p=nan
+2026-03-14 13:51:45 | INFO     | Correlation Engine – COMPLETE
+2026-03-14 13:51:45 | INFO     | ============================================================
