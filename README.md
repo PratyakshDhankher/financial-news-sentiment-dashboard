@@ -11,7 +11,7 @@ actionable signals through an interactive dashboard.
 
 ```mermaid
 flowchart LR
-    A[🌐 yfinance News API] -->|fetch_news.py| B[(SQLite DB\nfinancial_news.db)]
+    A[🌐 yfinance News API, NewsAPI and Google News RSS feeds] -->|fetch_news.py| B[(SQLite DB\nfinancial_news.db)]
     B -->|sentiment_analysis.py| C[🤖 FinBERT\nProsusAI/finbert]
     C -->|scores written back| B
     B -->|correlation_engine.py| D[📊 Correlation Engine\nscipy.stats.pearsonr]
